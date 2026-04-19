@@ -9,8 +9,6 @@ export default function Header() {
         <div className="mt-3 flex flex-wrap gap-4 text-sm text-gray-500">
           <span>San Diego, CA</span>
           <span>·</span>
-          <span>760-607-9227</span>
-          <span>·</span>
           <a href="mailto:jerrymrivas@protonmail.com" className="text-blue-600 hover:underline">
             jerrymrivas@protonmail.com
           </a>
