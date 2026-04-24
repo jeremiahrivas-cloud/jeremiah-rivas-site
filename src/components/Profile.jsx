@@ -3,10 +3,10 @@ export default function Profile() {
     <section id="profile" className="site-border-b">
       <div className="max-w-screen-xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        {/* Portrait placeholder — left */}
-        <div className="flex items-start justify-center md:justify-start">
-          <div className="site-panel site-border w-44 h-52 flex items-center justify-center">
-            <span className="font-sans text-xs site-muted tracking-widest uppercase">Photo</span>
+        {/* Portrait — left */}
+        <div>
+          <div className="site-panel site-border w-full overflow-hidden" style={{ height: '260px' }}>
+            <img src="/IMG_0491.png" alt="Jeremiah M. Rivas" className="w-full h-full object-cover" style={{ objectPosition: 'center 20%' }} />
           </div>
         </div>
 
