@@ -1,12 +1,13 @@
-export default function QRCode() {
+export default function QRCode({ sectionNumber }) {
   return (
-    <section className="py-8 px-6 bg-gray-50">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">
-          Scan to View Online
-        </h2>
-        <p className="text-sm text-gray-500">jeremiahrivas.com</p>
+    <section className="site-panel site-border p-5">
+      <div className="flex items-center gap-3 mb-3">
+        {sectionNumber && (
+          <span className="font-display text-xs tracking-widest font-bold site-sage">{sectionNumber}</span>
+        )}
+        <h2 className="font-display text-base site-ink">Scan to View Online</h2>
       </div>
+      <p className="font-sans text-sm site-muted">jeremiahrivas.com</p>
     </section>
   );
 }

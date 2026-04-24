@@ -37,28 +37,32 @@ const jobs = [
   },
 ];
 
-export default function Experience() {
+export default function Experience({ sectionNumber }) {
   return (
-    <section className="py-8 px-6">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">
-          Experience
-        </h2>
+    <section>
+      <div className="flex items-center gap-3 mb-5">
+        {sectionNumber && (
+          <span className="font-display text-xs tracking-widest font-bold site-sage">{sectionNumber}</span>
+        )}
+        <h2 className="font-display text-xl site-ink">Experience</h2>
+      </div>
+
+      <div className="site-divide">
         {jobs.map((job, i) => (
-          <div key={i} className="mb-6">
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="font-semibold text-gray-900">{job.title}</h3>
-                <p className="text-gray-600 text-sm">{job.org}</p>
-              </div>
-              <span className="text-sm text-gray-500 whitespace-nowrap ml-4">
+          <div key={i} className="py-4 first:pt-0">
+            <div className="flex justify-between items-start gap-4 mb-1">
+              <h3 className="font-display text-sm font-bold site-ink leading-snug">
+                {job.title}
+              </h3>
+              <span className="font-sans text-xs site-sage whitespace-nowrap shrink-0">
                 {job.period}
               </span>
             </div>
-            <ul className="mt-2 space-y-1">
+            <p className="font-sans text-xs site-muted mb-3">{job.org}</p>
+            <ul className="space-y-2">
               {job.bullets.map((b, j) => (
-                <li key={j} className="text-sm text-gray-700 flex gap-2">
-                  <span className="mt-1 text-gray-400">•</span>
+                <li key={j} className="font-sans text-sm site-muted flex gap-2 leading-relaxed">
+                  <span className="site-sage shrink-0 mt-0.5">–</span>
                   <span>{b}</span>
                 </li>
               ))}

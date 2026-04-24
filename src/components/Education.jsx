@@ -17,31 +17,47 @@ const certs = [
   "Certified Network Defense Architect (CNDA) — EC-Council",
 ];
 
-export default function Education() {
+export default function Education({ sectionNumber }) {
   return (
-    <section className="py-8 px-6 bg-gray-50">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">
-          Education &amp; Certifications
-        </h2>
+    <section className="site-panel site-border p-5">
+      <div className="flex items-center gap-3 mb-4">
+        {sectionNumber && (
+          <span className="font-display text-xs tracking-widest font-bold site-sage">{sectionNumber}</span>
+        )}
+        <h2 className="font-display text-base site-ink">Education &amp; Certifications</h2>
+      </div>
+
+      <div className="site-divide">
         {degrees.map((item, i) => (
-          <div key={i} className="mb-4">
-            <h3 className="font-semibold text-gray-900">{item.degree}</h3>
-            <p className="text-sm text-gray-600">{item.school} · {item.year}</p>
-            {item.note && <p className="text-sm text-gray-500">{item.note}</p>}
+          <div key={i} className="py-3 first:pt-0">
+            <h3 className="font-display text-sm site-ink">{item.degree}</h3>
+            <p className="font-sans text-xs site-muted mt-0.5">
+              {item.school} · {item.year}
+            </p>
+            {item.note && (
+              <p className="font-sans text-xs site-muted mt-0.5">{item.note}</p>
+            )}
           </div>
         ))}
-        <h3 className="font-semibold text-gray-800 mt-4 mb-2">Certifications</h3>
+      </div>
+
+      <div className="mt-4 pt-4 site-border-t">
+        <h3 className="font-display text-xs site-muted uppercase tracking-widest mb-2">
+          Certifications
+        </h3>
         <ul className="space-y-1">
           {certs.map((cert, i) => (
-            <li key={i} className="text-sm text-gray-700 flex gap-2">
-              <span className="text-gray-400">•</span>
+            <li key={i} className="font-sans text-sm site-ink flex gap-2">
+              <span className="site-sage shrink-0">–</span>
               <span>{cert}</span>
             </li>
           ))}
         </ul>
-        <p className="text-sm text-gray-600 mt-4">Spanish — Professional fluency, spoken and written</p>
       </div>
+
+      <p className="font-sans text-xs site-muted mt-4 pt-4 site-border-t">
+        Spanish — Professional fluency, spoken and written
+      </p>
     </section>
   );
 }

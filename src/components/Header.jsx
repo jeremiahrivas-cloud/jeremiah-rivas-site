@@ -1,18 +1,30 @@
 export default function Header() {
   return (
-    <header className="bg-white border-b border-gray-200 py-8 px-6">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900">Jeremiah M. Rivas</h1>
-        <p className="text-lg text-gray-600 mt-1">
-          Cybersecurity, Information Systems Risk &amp; Emerging Technology Governance
-        </p>
-        <div className="mt-3 flex flex-wrap gap-4 text-sm text-gray-500">
-          <span>San Diego, CA</span>
-          <span>·</span>
-          <a href="mailto:jerrymrivas@protonmail.com" className="text-blue-600 hover:underline">
+    <header className="sticky top-0 z-50 site-panel site-border-b">
+      <div className="max-w-screen-xl mx-auto px-6 h-14 flex items-center gap-6">
+
+        {/* Name — left */}
+        <span className="font-display font-bold site-ink whitespace-nowrap shrink-0">
+          Jeremiah M. Rivas
+        </span>
+
+        {/* Nav links — center */}
+        <nav className="flex-1 flex justify-center gap-8">
+          <a href="#profile" className="site-nav-link font-sans text-sm">Profile</a>
+          <a href="#work"    className="site-nav-link font-sans text-sm">Work</a>
+          <a href="#experience" className="site-nav-link font-sans text-sm">Experience</a>
+          <a href="#contact" className="site-nav-link font-sans text-sm">Contact</a>
+        </nav>
+
+        {/* Email + location — right */}
+        <div className="hidden md:flex items-center gap-3 shrink-0">
+          <a href="mailto:jerrymrivas@protonmail.com" className="site-sage-link font-sans text-sm">
             jerrymrivas@protonmail.com
           </a>
+          <span className="site-dot w-1.5 h-1.5 rounded-full inline-block" aria-hidden="true" />
+          <span className="site-muted font-sans text-xs">San Diego, CA</span>
         </div>
+
       </div>
     </header>
   );

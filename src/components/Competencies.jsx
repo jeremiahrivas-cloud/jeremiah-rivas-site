@@ -11,20 +11,21 @@ const competencies = [
   "Cross-Agency Program Leadership",
 ];
 
-export default function Competencies() {
+export default function Competencies({ sectionNumber }) {
   return (
-    <section className="py-8 px-6">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">
-          Core Competencies
-        </h2>
-        <div className="flex flex-wrap gap-2">
-          {competencies.map((item, i) => (
-            <span key={i} className="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
-              {item}
-            </span>
-          ))}
-        </div>
+    <section className="site-panel site-border p-6">
+      <div className="flex items-center gap-3 mb-5">
+        {sectionNumber && (
+          <span className="font-display text-xs tracking-widest font-bold site-sage">{sectionNumber}</span>
+        )}
+        <h2 className="font-display text-xl site-ink">Core Competencies</h2>
+      </div>
+      <div className="flex flex-wrap gap-2">
+        {competencies.map((item, i) => (
+          <span key={i} className="site-inset site-border font-sans text-sm site-ink px-3 py-1">
+            {item}
+          </span>
+        ))}
       </div>
     </section>
   );
