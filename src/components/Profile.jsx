@@ -5,8 +5,16 @@ export default function Profile() {
 
         {/* Portrait — left */}
         <div>
-          <div className="site-panel site-border w-full overflow-hidden" style={{ height: '260px' }}>
+          <div className="site-panel site-border w-full overflow-hidden" style={{ height: '286px' }}>
             <img src="/IMG_0491.png" alt="Jeremiah M. Rivas" className="w-full h-full object-cover" style={{ objectPosition: 'center 20%' }} />
+          </div>
+          <div style={{ marginTop: '0.85rem', paddingLeft: '0.25rem' }}>
+            <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1rem', color: '#1a1a1a', letterSpacing: '0.01em', lineHeight: '1.5', fontWeight: '600' }}>
+              Open to Director-level roles in AI Governance &amp; Information Security Risk — remote or international.
+            </p>
+            <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '0.95rem', color: '#2a2a2a', letterSpacing: '0.01em', lineHeight: '1.5', marginTop: '0.5rem', fontWeight: '500' }}>
+              Collaborative, process-driven leader who builds frameworks, sets the pace, and rolls up his sleeves when the work demands it.
+            </p>
           </div>
         </div>
 

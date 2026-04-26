@@ -5,6 +5,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import ContactForm from './components/ContactForm';
 import QRCode from './components/QRCode';
+import ChatAssistant from './components/ChatAssistant';
 
 export default function App() {
   return (
@@ -15,6 +16,9 @@ export default function App() {
       <main>
         {/* Hero row */}
         <Profile />
+
+        {/* AI Assistant */}
+        <ChatAssistant />
 
         {/* Mid row — Selected Work | Competencies */}
         <div id="work" className="site-border-b">
