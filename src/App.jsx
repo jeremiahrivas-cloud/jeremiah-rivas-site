@@ -4,33 +4,27 @@ import Competencies from './components/Competencies';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import ContactForm from './components/ContactForm';
-import QRCode from './components/QRCode';
+import QRcodes from './components/QRcodes';
 import ChatAssistant from './components/ChatAssistant';
+import Projects from './components/Projects';
 
 export default function App() {
   return (
     <div className="min-h-screen font-sans">
-
       <Header />
-
       <main>
-        {/* Hero row */}
         <Profile />
-
-        {/* AI Assistant */}
         <ChatAssistant />
+        <Projects />
 
-        {/* Mid row — Selected Work | Competencies */}
-        <div id="work" className="site-border-b">
+        {/* Selected Work + Competencies */}
+        <div id="work" style={{ borderBottom: '3px solid #1e2d40' }}>
           <div className="max-w-screen-xl mx-auto px-6 py-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-            {/* Selected Work */}
-            <section className="site-panel site-border p-6">
+            <section className="site-panel site-border p-6" style={{ borderTop: '3px solid #1e2d40' }}>
               <div className="flex items-center gap-3 mb-5">
                 <span className="font-display text-xs tracking-widest font-bold site-sage">01</span>
-                <h2 className="font-display text-xl site-ink">Selected Work</h2>
+                <h2 style={{ fontFamily: '"Times New Roman", Times, Georgia, serif', fontSize: '1.4rem', fontWeight: '800', color: '#1a2310' }}>Selected Work</h2>
               </div>
-
               <div className="site-inset site-border p-5">
                 <p className="font-sans text-xs tracking-widest uppercase site-sage mb-3">
                   Risk Assessment Artifact
@@ -65,24 +59,20 @@ export default function App() {
                 </div>
               </div>
             </section>
-
-            {/* Competencies */}
             <Competencies sectionNumber="02" />
           </div>
         </div>
 
-        {/* Bottom row — Experience | (Education + Contact + QR) */}
+        {/* Experience + right column */}
         <div id="experience" className="max-w-screen-xl mx-auto px-6 py-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Experience sectionNumber="03" />
-
           <div id="contact" className="flex flex-col gap-4">
             <Education sectionNumber="04" />
             <ContactForm sectionNumber="05" />
-            <QRCode sectionNumber="06" />
+            <QRcodes sectionNumber="06" />
           </div>
         </div>
       </main>
-
     </div>
   );
 }

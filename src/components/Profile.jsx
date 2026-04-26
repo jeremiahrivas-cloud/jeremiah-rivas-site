@@ -1,48 +1,44 @@
 export default function Profile() {
   return (
-    <section id="profile" className="site-border-b">
+    <section id="profile" style={{ borderBottom: '3px solid #1e2d40' }}>
       <div className="max-w-screen-xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        {/* Portrait — left */}
-        <div>
-          <div className="site-panel site-border w-full overflow-hidden" style={{ height: '286px' }}>
+        {/* Portrait + caption — left */}
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div className="site-panel site-border w-full overflow-hidden" style={{ flex: 1, borderBottom: 'none', borderRadius: '4px 4px 0 0' }}>
             <img src="/IMG_0491.png" alt="Jeremiah M. Rivas" className="w-full h-full object-cover" style={{ objectPosition: 'center 20%' }} />
           </div>
-          <div style={{ marginTop: '0.85rem', paddingLeft: '0.25rem' }}>
-            <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1rem', color: '#1a1a1a', letterSpacing: '0.01em', lineHeight: '1.5', fontWeight: '600' }}>
+          <div style={{ background: '#1e2d40', padding: '0.85rem 1rem', borderRadius: '0 0 4px 4px' }}>
+            <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '0.95rem', color: '#e8ebe4', letterSpacing: '0.01em', lineHeight: '1.5', fontWeight: '600' }}>
               Open to Director-level roles in AI Governance &amp; Information Security Risk — remote or international.
             </p>
-            <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '0.95rem', color: '#2a2a2a', letterSpacing: '0.01em', lineHeight: '1.5', marginTop: '0.5rem', fontWeight: '500' }}>
+            <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '0.88rem', color: '#b0bec5', letterSpacing: '0.01em', lineHeight: '1.5', marginTop: '0.4rem' }}>
               Collaborative, process-driven leader who builds frameworks, sets the pace, and rolls up his sleeves when the work demands it.
             </p>
           </div>
         </div>
 
-        {/* Tagline + thesis + profile — center */}
+        {/* Tagline + short bio — center */}
         <div className="flex flex-col justify-center">
           <h1 className="font-display text-3xl font-bold site-ink leading-snug">
             Cybersecurity, Information Systems Risk &amp; Emerging Technology Governance
           </h1>
-          <p className="font-display mt-3 text-base site-muted leading-snug">
+          <p className="font-display mt-4 text-lg site-muted leading-snug">
             Equally fluent in the language of the regulator, the technologist, and the
             boardroom — translating complex risk findings into action across the enterprise.
           </p>
           <p className="font-sans mt-4 text-sm site-muted leading-relaxed">
-            Cybersecurity and emerging technology risk professional with deep roots
-            in financial institution examination and enterprise risk management.
-            Progressed from auditing enterprise financial risk at the most complex
-            federally insured institutions in the country to leading information
-            systems security and emerging technology governance at the national
-            level. CISSP and CNDA credentialed, combat veteran, and equally fluent
-            in the language of the regulator, the technologist, and the boardroom.
-            Experienced engaging senior leadership across the enterprise, building
-            consensus on complex risk findings and translating them into action
-            across business units and areas.
+            15 years progressing from safety-and-soundness examination at the FDIC to leading
+            information systems security and emerging technology governance at the national level.
+            CISSP and CNDA credentialed. Combat veteran.
+          </p>
+          <p className="font-display mt-4 text-sm font-semibold" style={{ color: '#1e2d40' }}>
+            FDIC · NCUA · NIST AI RMF · NIST CSF · CISSP · CNDA · USMC · OIF
           </p>
         </div>
 
         {/* At a Glance — right */}
-        <div className="site-panel site-border p-5">
+        <div className="site-panel site-border p-5" style={{ borderTop: '3px solid #1e2d40' }}>
           <h2 className="font-display text-xs tracking-widest uppercase site-sage mb-4">
             At a Glance
           </h2>

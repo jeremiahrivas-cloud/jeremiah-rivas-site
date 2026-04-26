@@ -1,14 +1,40 @@
+const fs = require('fs');
+
+// Add mobile CSS to index.css
+let css = fs.readFileSync('src/index.css', 'utf8');
+if (!css.includes('ask-jerry-outer')) {
+  css += `
+/* ── Ask Jerry mobile stack ──────────────────────────────── */
+@media (max-width: 640px) {
+  .ask-jerry-outer {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  .ask-jerry-panel {
+    width: 100% !important;
+    height: 200px !important;
+    border-right: none !important;
+    border-bottom: 3px solid #1e2d40 !important;
+  }
+}
+`;
+  fs.writeFileSync('src/index.css', css, 'utf8');
+  console.log('index.css updated');
+}
+
+// Rewrite ChatAssistant with class hooks
+fs.writeFileSync('src/components/ChatAssistant.jsx', `
 import { useState, useRef, useEffect } from 'react';
 
 const WORKER_URL = 'https://jeremiah-rivas-chat.vst6v8gb89.workers.dev';
 
 function stripMarkdown(text) {
   return text
-    .replace(/\*\*(.*?)\*\*/g, '$1')
-    .replace(/\*(.*?)\*/g, '$1')
-    .replace(/#{1,6}\s+/g, '')
-    .replace(/`(.*?)`/g, '$1')
-    .replace(/^\s*[-*+]\s+/gm, '- ')
+    .replace(/\\*\\*(.*?)\\*\\*/g, '$1')
+    .replace(/\\*(.*?)\\*/g, '$1')
+    .replace(/#{1,6}\\s+/g, '')
+    .replace(/\`(.*?)\`/g, '$1')
+    .replace(/^\\s*[-*+]\\s+/gm, '- ')
     .trim();
 }
 
@@ -199,3 +225,6 @@ export default function ChatAssistant() {
     </section>
   );
 }
+`.trimStart(), 'utf8');
+console.log('ChatAssistant.jsx written');
+console.log('All done.');

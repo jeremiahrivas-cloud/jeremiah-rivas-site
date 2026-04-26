@@ -8,6 +8,7 @@
   --color-panel:      #ffffff;
   --color-sage:       #4a5e3f;
   --color-sage-light: #dde4d8;
+  --color-navy:       #1e2d40;
   --color-ink:        #1a2310;
   --color-muted:      #4b5563;
   --color-rule:       #b0b8aa;
@@ -17,44 +18,71 @@
 @layer base {
   html {
     scroll-padding-top: 56px;
+    font-size: 18px;
   }
-
   body {
     background-color: var(--color-bg);
     color: var(--color-ink);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
-
   h1, h2, h3, h4, h5, h6 {
     font-family: "Times New Roman", Times, Georgia, serif;
   }
 }
 
-/* ── Color utilities (CSS-variable backed) ───────────────────── */
+/* ── Color utilities ─────────────────────────────────────────── */
 .site-bg      { background-color: var(--color-bg); }
 .site-panel   { background-color: var(--color-panel); }
 .site-inset   { background-color: var(--color-sage-light); }
-
 .site-sage    { color: var(--color-sage); }
+.site-navy    { color: var(--color-navy); }
 .site-ink     { color: var(--color-ink); }
 .site-muted   { color: var(--color-muted); }
 
-.site-border  { border: 1px solid var(--color-rule); }
-.site-border-b { border-bottom: 1px solid var(--color-rule); }
-.site-border-t { border-top: 1px solid var(--color-rule); }
+/* ── Border utilities ────────────────────────────────────────── */
+.site-border    { border: 1px solid var(--color-rule); }
+.site-border-b  { border-bottom: 1px solid var(--color-rule); }
+.site-border-t  { border-top: 1px solid var(--color-rule); }
 .site-divide > * + * { border-top: 1px solid var(--color-rule); }
 
-/* nav links */
+/* Panel depth — layered shadow + left navy accent */
+.site-panel {
+  background-color: var(--color-panel);
+  box-shadow: 0 1px 3px rgba(30,45,64,0.08), 0 4px 12px rgba(30,45,64,0.06);
+}
+.site-panel-accent {
+  border-left: 3px solid var(--color-navy);
+}
+.site-navy-bg {
+  background-color: var(--color-navy);
+}
+.site-navy-border {
+  border-color: var(--color-navy);
+}
+
+/* ── Nav ─────────────────────────────────────────────────────── */
 .site-nav-link       { color: var(--color-ink); transition: color 0.15s; }
 .site-nav-link:hover { color: var(--color-sage); }
 
-/* email / sage text links */
+/* ── Links ───────────────────────────────────────────────────── */
 .site-sage-link       { color: var(--color-sage); }
 .site-sage-link:hover { text-decoration: underline; }
 
-/* status dot */
-.site-dot { background-color: var(--color-sage); }
-
-/* CTA button */
+/* ── Dot / CTA ───────────────────────────────────────────────── */
+.site-dot             { background-color: var(--color-sage); }
 .site-cta             { display: inline-block; background-color: var(--color-sage); color: #ffffff; transition: opacity 0.15s; }
 .site-cta:hover       { opacity: 0.88; }
+
+/* ── Ask Jerry mobile stack ──────────────────────────────── */
+@media (max-width: 640px) {
+  .ask-jerry-outer {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  .ask-jerry-panel {
+    width: 100% !important;
+    height: 200px !important;
+    border-right: none !important;
+    border-bottom: 3px solid #1e2d40 !important;
+  }
+}
