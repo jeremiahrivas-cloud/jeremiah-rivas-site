@@ -4,7 +4,7 @@ export default function Projects() {
       id: '01',
       title: 'jeremiahrivas.com',
       category: 'Live Platform',
-      description: 'This site — a governed AI deployment with layered security, a grounded career intelligence assistant, and a published risk assessment. Built solo using AI-assisted development.',
+      description: 'This site — a governed AI deployment with layered security, a professional AI assistant grounded in published methodology, and a platform risk assessment. Built solo using AI-assisted development.',
       stack: 'React · Vite · Tailwind CSS · Cloudflare Pages · Anthropic API',
       status: 'Live',
       statusColor: '#4a5e3f',

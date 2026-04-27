@@ -16,7 +16,7 @@ export default function ChatAssistant() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: "I can answer questions about Jerry's background, experience, and target roles. What would you like to know?"
+      content: "I can answer questions about Jerry's background, experience, and published work. What would you like to know?"
     }
   ]);
   const [input, setInput] = useState('');
@@ -70,7 +70,7 @@ export default function ChatAssistant() {
           lineHeight: '1.5',
           marginBottom: '1rem'
         }}>
-          A personalized career intelligence assistant trained on Jerry's professional background, methodology, and philosophy. Ask anything about his experience, target roles, or approach to governance and risk.
+          A professional assistant grounded in Jerry's background, methodology, and published work. Ask anything about his experience, credentials, or approach to governance and risk.
         </p>
 
         <div className="ask-jerry-outer" style={{
