@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 const SUPABASE_URL = 'https://chremzjufpsdvxtwthpn.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_nla4PYtTQL0ZMLaCp4rxiA_2hq_87eu';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNocmVtemp1ZnBzZHZ4dHd0aHBuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwNzIwMTcsImV4cCI6MjA5NDY0ODAxN30.CMipvSsE2B35Di68Pr05ip2Fk858WycorSXKN4RVJq4';
 
 const RATING_STYLES = {
   LOW:      { bg: 'var(--sl-low-bg)',      text: 'var(--sl-low-text)',      border: 'var(--sl-low-border)' },
