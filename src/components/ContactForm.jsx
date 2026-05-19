@@ -11,10 +11,10 @@ export default function ContactForm({ sectionNumber }) {
         For professional inquiries, reach out directly:
       </p>
       <a
-        href="mailto:jerrymrivas@protonmail.com"
+        href="mailto:jerry@jeremiahrivas.com"
         className="site-cta font-sans text-sm px-5 py-2.5"
       >
-        jerrymrivas@protonmail.com
+        jerry@jeremiahrivas.com
       </a>
     </section>
   );

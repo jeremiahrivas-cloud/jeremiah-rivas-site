@@ -47,7 +47,7 @@ export default function ChatAssistant() {
     } catch {
       setMessages([...updated, {
         role: 'assistant',
-        content: 'Something went wrong. Reach out directly at jerrymrivas@protonmail.com.'
+        content: 'Something went wrong. Reach out directly at jerry@jeremiahrivas.com.'
       }]);
     } finally {
       setLoading(false);

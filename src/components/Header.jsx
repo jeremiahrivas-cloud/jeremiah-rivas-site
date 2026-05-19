@@ -18,8 +18,8 @@ export default function Header() {
 
         {/* Email + location — right */}
         <div className="hidden md:flex items-center gap-3 shrink-0">
-          <a href="mailto:jerrymrivas@protonmail.com" className="site-sage-link font-sans text-sm">
-            jerrymrivas@protonmail.com
+          <a href="mailto:jerry@jeremiahrivas.com" className="site-sage-link font-sans text-sm">
+            jerry@jeremiahrivas.com
           </a>
           <span className="site-dot w-1.5 h-1.5 rounded-full inline-block" aria-hidden="true" />
           <span className="site-muted font-sans text-xs">San Diego, CA</span>
